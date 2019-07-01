@@ -50,7 +50,200 @@ public class DesignTable implements Initializable {
 //               arrayList for ship
     ArrayList<Ship> ships = new ArrayList();
 
-    
+    public Boolean validate() {
+
+        boolean flag1=false;
+
+
+        for (int i = 0; i < ships.size(); i++) {
+            int a = ships.get(i).getxHouse();
+            int b = ships.get(i).getyHouse();
+            int x = (int) ships.get(i).getX();
+            int y = (int) ships.get(i).getY();
+            int xl = (int) ships.get(i).getLimitX();
+            int yl = (int) ships.get(i).getLimitY();
+
+            if (ships.get(i).getName().equals("Ship1")) {
+                if (shipPosition[a+1][b]==0||shipPosition[a+1][b]==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+                if (shipPosition[a-1][b]==0||shipPosition[a-1][b]==-1){
+                    flag1=true;
+                }
+                else{
+                    return false;
+                }
+                if (shipPosition[a][b-1]==0||shipPosition[a][b-1]==-1){
+                    flag1=true;
+                }
+                else{
+                    return false;
+                }
+                if (shipPosition[a][b+1]==0||shipPosition[a][b+1]==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (ships.get(i).getName().equals("Ship2")) {
+
+                if (shipPosition[a + 2][b] ==0||shipPosition[a + 2][b] ==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+                if (shipPosition[a - 1][b] ==0||shipPosition[a - 1][b] ==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+                for (int j = 0; j < 4; j++) {
+                    if (shipPosition[a + j - 1][b - 1] == 0||shipPosition[a + j - 1][b - 1] ==-1){
+                        flag1= true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                for (int j = 0; j < 4; j++) {
+                    if (shipPosition[a + j - 1][b + 1] == 0||shipPosition[a + j - 1][b + 1] ==-1){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            if (ships.get(i).getName().equals("Ship2r")) {
+                if (shipPosition[a][b + 2] ==0||shipPosition[a][b + 2] ==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+                if (shipPosition[a][b - 1] == 0||shipPosition[a][b - 1] ==-1) {
+                    flag1 = true;
+                }
+                else {
+                    return false;
+                }
+
+                for (int j = 0; j < 4; j++) {
+                    if (shipPosition[a + 1][b + j] ==0||shipPosition[a + 1][b + j] ==-1){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                for (int j = 0; j < 4; j++) {
+                    if (shipPosition[a - 1][b + j] ==0||shipPosition[a - 1][b + j] ==-1){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+
+            }
+            if (ships.get(i).getName().equals("Ship3")) {
+                if (shipPosition[a + 3][b] ==0||shipPosition[a + 3][b] ==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+                if (shipPosition[a - 1][b] ==0||shipPosition[a - 1][b] ==-1){
+                    flag1=true;
+                }
+                else {
+                    return false;
+                }
+
+                for (int j = 0; j < 5; j++) {
+                    if (shipPosition[a + j - 1][b + 1] ==0||shipPosition[a + j - 1][b + 1]==-1){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                for (int j = 0; j < 5; j++) {
+                    if (shipPosition[a + j - 1][b - 1] ==0||shipPosition[a + j - 1][b - 1]==-1){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            if (ships.get(i).getName().equals("Ship3r")) {
+                if (shipPosition[a][b + 3] == 0||shipPosition[a][b + 3] == -1) {
+                    flag1 = true;
+                }
+                else {
+                    return false;
+                }
+                if (shipPosition[a][b - 1] == 0||shipPosition[a][b - 1] ==-1){
+                    flag1=true;
+                }
+                else
+                {
+                    return false;
+                }
+
+                for (int j = 0; j < 5; j++) {
+                    if (shipPosition[a + 1][b + j - 1] == 0||shipPosition[a + 1][b + j - 1] == 0){
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                for (int j = 0; j < 5; j++) {
+                    if (shipPosition[a - 1][b + j - 1] ==0||shipPosition[a - 1][b + j - 1] ==-1) {
+                        flag1=true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            if (ships.get(i).getName().equals("Ship4")) {
+                if (shipPosition[a + 4][b] == 0 || shipPosition[a + 4][b] == -1) {
+                    flag1 = true;
+                } else {
+                    return false;
+                }
+
+                if (shipPosition[a - 1][b] == 0 || shipPosition[a - 1][b] == -1)
+                    flag1 = true;
+            } else {
+                return false;
+            }
+            for (int j = 0; j < 6; j++) {
+                if (shipPosition[a + j - 1][b + 1] == 0 || shipPosition[a + j - 1][b + 1] == -1) {
+                    flag1 = true;
+                } else {
+                    return false;
+                }
+            }
+            for (int j = 0; j < 6; j++) {
+                if (shipPosition[a + j - 1][b - 1] == 0 || shipPosition[a + j - 1][b - 1] == -1) {
+                    flag1 = true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        return flag1;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
