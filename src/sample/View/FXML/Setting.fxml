@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" styleClass="settingaRoot" stylesheets="@../StyleSheet/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Setting">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="1280.0" layoutY="148.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Black2.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="136.0" layoutY="253.0" prefHeight="312.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="MusicSetting" layoutX="40.0" layoutY="25.0" onMouseClicked="#MusicSetting" prefHeight="38.0" prefWidth="120.0" text="Sound" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="GamesSetting" layoutX="40.0" layoutY="91.0" onMouseClicked="#GamesSetting" prefHeight="38.0" prefWidth="120.0" text="Games" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="PlayerSetting" layoutX="40.0" layoutY="159.0" onMouseClicked="#PlayerSetting" prefHeight="38.0" prefWidth="120.0" text="Player" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="backPane" layoutX="94.0" layoutY="158.0" onMouseClicked="#BackToMenu" prefHeight="52.0" prefWidth="137.0" stylesheets="@../StyleSheet/Main.css">
+         <children>
+            <Label fx:id="backLabel" layoutX="37.0" layoutY="2.0" prefHeight="21.0" prefWidth="96.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="35.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backImg" fitHeight="28.0" fitWidth="34.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Icons/icons8-back-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="MusicPane" layoutX="504.0" layoutY="200.0" prefHeight="347.0" prefWidth="741.0">
+         <children>
+            <Label layoutX="38.0" layoutY="76.0" prefHeight="50.0" prefWidth="85.0" text="Music :" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="174.0" prefHeight="50.0" prefWidth="85.0" text="Sound :" textFill="WHITE">
+               <font>
+                  <Font name="Arabic Typesetting" size="37.0" />
+               </font>
+            </Label>
+            <Pane layoutX="246.0" layoutY="76.0" prefHeight="50.0" prefWidth="410.0">
+               <children>
+                  <ImageView fx:id="musicLeft" fitHeight="43.0" fitWidth="48.0" layoutY="4.0" onMouseClicked="#CahngeMusicSystemLeft" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="musicRight" fitHeight="43.0" fitWidth="48.0" layoutX="367.0" layoutY="4.0" onMouseClicked="#CahngeMusicSystem" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="MusicPro" layoutX="145.0" layoutY="8.0" prefHeight="21.0" prefWidth="120.0" style="-fx-alignment: center;" text="ON" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arabic Typesetting" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="246.0" layoutY="174.0" prefHeight="50.0" prefWidth="410.0">
+               <children>
+                  <ImageView fx:id="SoundLeft" fitHeight="43.0" fitWidth="48.0" layoutY="4.0" onMouseClicked="#CahngeSoundSystemLeft" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="SoundRight" fitHeight="43.0" fitWidth="48.0" layoutX="367.0" layoutY="4.0" onMouseClicked="#CahngeSoundSystem" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="SoundPro" layoutX="145.0" layoutY="8.0" prefHeight="21.0" prefWidth="120.0" style="-fx-alignment: center;" text="ON" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arabic Typesetting" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

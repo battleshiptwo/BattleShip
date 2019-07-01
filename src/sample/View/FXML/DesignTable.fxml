@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: red;" styleClass="DesignRoot" stylesheets="@../StyleSheet/Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.DesignTable">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="1200.0" layoutY="718.0" opacity="0.59" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/Black2.jpg" />
+               </image>
+            </ImageView>
+            <Pane fx:id="cancelPane" layoutX="14.0" layoutY="732.0" onMouseClicked="#BackToMenu" prefHeight="55.0" prefWidth="165.0">
+               <children>
+                  <Label fx:id="canselLabel" layoutX="83.0" layoutY="8.0" prefHeight="21.0" prefWidth="58.0" style="-fx-alignment: center;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arabic Typesetting" size="29.0" />
+                     </font></Label>
+                  <ImageView fx:id="canselImage" fitHeight="33.0" fitWidth="66.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="startPane" layoutX="956.0" layoutY="732.0" onMouseClicked="#StartTheGame" prefHeight="55.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="startGameLabel" layoutX="14.0" layoutY="8.0" prefHeight="40.0" prefWidth="144.0" style="-fx-alignment: center;" text="Start The Game" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arabic Typesetting" size="30.0" />
+                     </font></Label>
+                  <ImageView fx:id="startGameIMage" fitHeight="33.0" fitWidth="66.0" layoutX="158.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../Images/Icons/icons8-back-96.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView blendMode="SRC_ATOP" fitHeight="600.0" fitWidth="600.0" layoutX="300.0" layoutY="43.0" opacity="0.76" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../Images/ships/PlayGround.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="designPane" layoutX="300.0" layoutY="43.0" prefHeight="600.0" prefWidth="600.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
